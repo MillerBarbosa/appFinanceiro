@@ -7,11 +7,37 @@ function updateSummaries() {
   const wants = totalIncome * 0.3;
   const savings = totalIncome * 0.2;
 
-  document.getElementById("rule-summary").innerHTML = `
+  /*document.getElementById("rule-summary").innerHTML = `
     <p>Necessidades (50%): R$ ${needs.toFixed(2)}</p>
     <p>Desejos (30%): R$ ${wants.toFixed(2)}</p>
     <p>Poupança (20%): R$ ${savings.toFixed(2)}</p>
+  `; */
+
+
+  
+document.getElementById("rule-summary").innerHTML = `
+  <p><strong>Necessidades (50%):</strong> R$ ${needs.toFixed(2)}</p>
+  <ul>
+    <li>Moradia</li>
+    <li>Alimentação</li>
+    <li>Transporte</li>
+  </ul>
+
+  <p><strong>Desejos (30%):</strong> R$ ${wants.toFixed(2)}</p>
+  <ul>
+    <li>Lazer</li>
+    <li>Compras não essenciais</li>
+    <li>Assinaturas</li>
+  </ul>
+
+  <p><strong>Poupança (20%):</strong> R$ ${savings.toFixed(2)}</p>
+  <ul>
+    <li>Reserva de emergência</li>
+    <li>Investimentos</li>
+    <li>Previdência</li>
+  </ul>
   `;
+
 
   // Resumo Real
   const needsReal = totalExpense <= needs ? "✅ Dentro do limite" : "❌ Acima do limite";
