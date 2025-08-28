@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>App Financeiro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>App Financeiro</h1>
+
+  <div id="auth-section">
+    <h2>Login / Cadastro</h2>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="register()">Cadastrar</button>
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <div id="finance-section" style="display:none;">
+    <h2>Receitas e Despesas</h2>
+    <input type="number" id="income" placeholder="Receita">
+    <button onclick="addIncome()">Adicionar Receita</button><br><br>
+
+    <input type="number" id="expense" placeholder="Despesa">
+    <button onclick="addExpense()">Adicionar Despesa</button><br><br>
+
+    <h3>Resumo 50/30/20</h3>
+    <div id="rule-summary"></div>
+
+    <h3>Resumo Real</h3>
+    <div id="real-summary"></div>
+  </div>
+<script src="auth.js"></script>
+<script src="finance.js"></script>
+<script src="summary.js"></script>
+  
+</body>
+</html>
